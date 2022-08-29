@@ -1,5 +1,5 @@
 # SFDCTools
-Tools for SFDC
+Tools for SFDC and working with it via bash
 
 ## sfdx_helpers.sh examples
 ```bash
