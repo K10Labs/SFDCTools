@@ -7,10 +7,10 @@ function install_salesforce_cli() {
     export SFDX_DOMAIN_RETRY=300
     export SFDX_PROJECT_AUTOUPDATE_DISABLE_FOR_PACKAGE_CREATE=true
     export SFDX_PROJECT_AUTOUPDATE_DISABLE_FOR_PACKAGE_VERSION_CREATE=true
-    mkdir sfdx
+    mkdir .sfdx
     CLIURL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-    wget -qO- $CLIURL | tar xJ -C sfdx --strip-components 1
-    "./sfdx/install"
+    wget -qO- $CLIURL | tar xJ -C .sfdx --strip-components 1
+    "./.sfdx/install"
     export PATH=./sfdx/$(pwd):$PATH
     if [[ ! -e "$HOME/.config/sfdx/unsignedPluginAllowList.json" ]]; then
         mkdir -p $HOME/.config/sfdx
