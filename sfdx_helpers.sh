@@ -356,7 +356,7 @@ function deploy_metadata() {
         exit 1
     fi
     if [[ -z "$RUN_TESTS" ]]; then
-        RUN_TESTS="accountSearchControllerTest"
+        RUN_TESTS="null"
     fi
     sfdx force:source:deploy --targetusername $org_username -p $source_folder --testlevel RunSpecifiedTests --runtests $RUN_TESTS
 }
